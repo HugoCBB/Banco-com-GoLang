@@ -1,7 +1,7 @@
 package contas
 
 import (
-	"caixa/clientes"
+	"banco-com-golang/clientes"
 )
 
 type ContaCorrente struct {
@@ -38,8 +38,8 @@ func (c *ContaCorrente) Transferir(valorDeTransferencia float64, contaDestino *C
 
 }
 
-func (c *ContaCorrente) ObterSaldo() float64 {
-	return c.saldo
+func (c *ContaCorrente) ObterSaldo() (string, float64) {
+	return "Saldo: R$", c.saldo
 }
 
 func (c *ContaCorrente) analiseDeCreditos() bool {
@@ -71,13 +71,3 @@ func (c *ContaCorrente) Financiamento(valorDoFinanciamento float64, tempoDePagam
 	}
 
 }
-
-// func (c *ContaCorrente) VerificarConta() string {
-// 	if c.Titular == "" {
-// 		return "Conta não existe"
-// 	} else {
-// 		return "Conta existente"
-
-// 	}
-
-// }

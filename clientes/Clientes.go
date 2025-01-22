@@ -1,6 +1,6 @@
 package clientes
 
 type Usuario struct {
-	Titular, Telefone                   string
-	CPF, NumeroDaConta, NumeroDaAgencia int
+	Titular, Telefone, CPF         string
+	NumeroDaConta, NumeroDaAgencia int
 }
